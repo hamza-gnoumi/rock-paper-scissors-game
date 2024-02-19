@@ -1,0 +1,16 @@
+<main class=" d-flex justify-content-center align-items-center mt-4 mt-md-5">
+  <div class="game">
+    <img src="../assets/images/bg-triangle.svg" alt="bg-triangle" class="triangle">
+    <div class="choices">
+      <div class="choice paper " [routerLink]="['/battle', 'paper']">
+        <img src="../assets/images/icon-paper.svg" alt="icon-paper">
+      </div>
+      <div class="choice scissors" [routerLink]="['/battle', 'scissors']">
+        <img src="../assets/images/icon-scissors.svg" alt="icon-scissors">
+      </div>
+      <div class="choice rock" [routerLink]="['/battle', 'rock']">
+        <img src="../assets/images/icon-rock.svg" alt="icon-rock">
+      </div>
+    </div>
+  </div>
+</main>

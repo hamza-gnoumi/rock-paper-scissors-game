@@ -1,0 +1,41 @@
+.game {
+  position: relative;
+}
+
+.game .triangle {
+  position: relative;
+  z-index: -2;
+}
+
+@media (min-width: 767px) {
+
+  .game .triangle {
+    width: 400px;
+  }
+}
+
+
+.choice {
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.choice:hover {
+  transform: scale(1.2);
+}
+
+.choices .paper {
+  top: -60px;
+  left: -20px;
+
+}
+
+.choices .scissors {
+  top: -60px;
+  right: -20px;
+}
+
+.choices .rock {
+  bottom: -60px;
+  left: 32%;
+}

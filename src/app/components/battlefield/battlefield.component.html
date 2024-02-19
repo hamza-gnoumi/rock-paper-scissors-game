@@ -1,0 +1,40 @@
+<main class=" d-flex flex-column justify-content-center align-items-center mt-4 mt-md-5">
+  <div class="battle d-flex gap-3 justify-content-around align-items-center ">
+    <div class="you-picked col-6">
+      <h3 class="text-uppercase fw-bold"> you picked</h3>
+      <div class=" your-choice">
+        <div [class]="'choice '+ userChoice" [ngClass]="(winners==='you') ? 'winner' : ''">
+          <img [src]="'../assets/images/icon-'+userChoice+'.svg'" alt="icon-paper">
+        </div>
+      </div>
+    </div>
+    <div class="house-picked col-6">
+      <h3 class="text-uppercase fw-bold"> The house picked</h3>
+      <div class="house-choice">
+        <div [ngClass]="(play) ? 'hide' : 'show'">
+          <div class="choice paper paper-choix">
+            <img src="../assets/images/icon-paper.svg" alt="icon-paper">
+          </div>
+          <div class="choice rock rock-choix">
+            <img src="../assets/images/icon-rock.svg" alt="icon-rock">
+          </div>
+          <div class="choice scissors scissors-choix">
+            <img src="../assets/images/icon-scissors.svg" alt="icon-scissors">
+          </div>
+        </div>
+        <div [ngClass]="(!play) ? 'hide' : 'show'">
+          <div [class]="chosen.title +' choice' " [ngClass]="{'winner': winners === 'computer'}">
+            <img [src]="chosen.imgSource" [alt]="chosen.alt">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="text-center text-uppercase rslt mt-5" [ngClass]="{'hide': result===''}">
+    <h2>{{result}}</h2>
+    <a [routerLink]="''">Play again</a>
+  </div>
+</main>
